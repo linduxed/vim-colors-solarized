@@ -107,26 +107,16 @@ overwrite replace mode).
 ==============================================================================
 3. Solarized Terminal Issues				*solarized-term*
 
-If you are going to use Solarized in Terminal mode (i.e. not in a GUI version
-like gvim or macvim), **please please please** consider setting your terminal
-emulator's colorscheme to used the Solarized palette. I've included palettes
-for some popular terminal emulator as well as Xdefaults in the official
-Solarized download available from the Solarized homepage listed at the top of
-this help document. If you use Solarized *without* these colors, Solarized
-will need to be told to degrade its colorscheme to a set compatible with the
-limited 256 terminal palette (whereas by using the terminal's 16 ansi color
-values, you can set the correct, specific values for the Solarized palette).
+Loading the theme in a terminal without setting the amount of terminal colors
+(t_Co) will result in the theme breaking. The theme also needs to have it
+specified that you want to use the 256 color version. Therefore I recommend you
+add the following lines before `colorscheme solar-linduxed`:
 
-If you do use the custom terminal colors, solarized.vim should work out of
-the box for you. If you are using a terminal emulator that supports 256
-colors and don't want to use the custom Solarized terminal colors, you will
-need to use the degraded 256 colorscheme. To do so, simply add the following
-line *before* the `colorschem solarized` line:
+    if !has('gui_running')
+        set t_Co=256
+        let g:solarized_termcolors=256
+    endif
 
-    let g:solarized_termcolors=256
-
-Again, I recommend just changing your terminal colors to Solarized values
-either manually or via one of the many terminal schemes available for import.
 
 ==============================================================================
 4. Solarized Options					*solarized-options*
@@ -151,7 +141,6 @@ option name               default     optional
 ------------------------------------------------
 g:solarized_termcolors=   16      |   256
 g:solarized_termtrans =   0       |   1
-g:solarized_degrade   =   0       |   1
 g:solarized_bold      =   1       |   0
 g:solarized_underline =   1       |   0
 g:solarized_italic    =   1       |   0
@@ -173,16 +162,6 @@ color capable terminal.  Otherwise, if set to `16` it will use the terminal
 emulators colorscheme (best option as long as you've set the emulators colors
 to the Solarized palette).
 
-If you are going to use Solarized in Terminal mode (i.e. not in a GUI
-version like gvim or macvim), **please please please** consider setting your
-terminal emulator's colorscheme to used the Solarized palette. I've included
-palettes for some popular terminal emulator as well as Xdefaults in the
-official Solarized download available from:
-http://ethanschoonover.com/solarized . If you use Solarized without these
-colors, Solarized will by default use an approximate set of 256 colors.  It
-isn't bad looking and has been extensively tweaked, but it's still not quite
-the real thing.
-
 ------------------------------------------------
 g:solarized_termtrans =   0       |   1			*'solarized_termtrans'*
 ------------------------------------------------
@@ -194,12 +173,6 @@ emulator. *urxvt* required this in my testing; iTerm2 did not.
 Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by
 default as this is almost always the best option. The only exception to this
 is if the working terminfo file supports 256 colors (xterm-256color).
-
-------------------------------------------------
-g:solarized_degrade   =   0       |   1			*'solarized_degrade'*
-------------------------------------------------
-For test purposes only; forces Solarized to use the 256 degraded color mode
-to test the approximate color values for accuracy.
 
 ------------------------------------------------
 g:solarized_bold      =   1       |   0			*'solarized_bold'*

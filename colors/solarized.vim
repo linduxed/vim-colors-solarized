@@ -215,7 +215,6 @@ else
     let s:solarized_termtrans_default = 0
 endif
 call s:SetOption("termtrans",s:solarized_termtrans_default)
-call s:SetOption("degrade",0)
 call s:SetOption("bold",1)
 call s:SetOption("underline",1)
 call s:SetOption("italic",1) " note that we need to override this later if the terminal doesn't support
