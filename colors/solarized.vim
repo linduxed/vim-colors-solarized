@@ -12,7 +12,8 @@
 " Solarized theme, made by Ethan Schoonover.
 "
 " Currently only the dark version works properly.
-" Only the 256-color-terminal colors have been configured and tested.
+"
+" The GUI colors are identical to the 256-color-terminal colors.
 "
 " ---------------------------------------------------------------------
 " OPTIONS:
@@ -93,24 +94,29 @@
 " L\*a\*b values are canonical (White D65, Reference D50), other values are
 " matched in sRGB space.
 "
-" SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      sRGB        HSB
-" --------- ------- ---- -------  ----------- ---------- ----------- -----------
-" base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
-" base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
-" base01    #586e75 10/7 brgreen  240 #4e4e4e 45 -07 -07  88 110 117 194  25  46
-" base00    #657b83 11/7 bryellow 241 #585858 50 -07 -07 101 123 131 195  23  51
-" base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
-" base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
-" base2     #eee8d5  7/7 white    254 #d7d7af 92 -00  10 238 232 213  44  11  93
-" base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
-" yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
-" orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
-" red       #dc322f  1/1 red      160 #d70000 50  65  45 220  50  47   1  79  86
-" magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
-" violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
-" blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
-" cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
-" green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+" SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX
+" --------- ------- ---- -------  -----------
+" base04    #002b36  8/4 brblack  234 #1c1c1c
+" base03    #002b36  8/4 brblack  234 #1c1c1c
+" base02    #073642  0/4 black    235 #262626
+" base01    #586e75 10/7 brgreen  240 #4e4e4e
+" base00    #657b83 11/7 bryellow 241 #585858
+" base0     #839496 12/6 brblue   244 #808080
+" base1     #93a1a1 14/4 brcyan   245 #8a8a8a
+" base2     #eee8d5  7/7 white    254 #d7d7af
+" base3     #fdf6e3 15/7 brwhite  230 #ffffd7
+" yellow    #b58900  3/3 yellow   136 #af8700
+" orange    #cb4b16  9/3 brred    166 #d75f00
+" red       #dc322f  1/1 red      160 #d70000
+" magenta   #d33682  5/5 magenta  125 #af005f
+" violet    #6c71c4 13/5 brmagenta 61 #5f5faf
+" blue      #268bd2  4/4 blue      33 #0087ff
+" cyan      #2aa198  6/6 cyan      37 #00afaf
+" green     #859900  2/2 green     64 #5f8700
+" dred      #859900  2/2 green     64 #5f8700
+" dblue     #859900  2/2 green     64 #5f8700
+" dcyan     #859900  2/2 green     64 #5f8700
+" dgreen    #859900  2/2 green     64 #5f8700
 "
 " ---------------------------------------------------------------------
 " COLORSCHEME HACKING
@@ -155,7 +161,7 @@ else
 endif
 
 " }}}
-" Default option values"{{{
+" Default option values "{{{
 " ---------------------------------------------------------------------
 " s:options_list is used to autogenerate a list of all non-default options
 " using "call SolarizedOptions()" or with the "Generate .vimrc commands"
@@ -230,7 +236,7 @@ endif
 let colors_name = "solar-linduxed"
 
 "}}}
-" GUI & CSApprox hexadecimal palettes"{{{
+" Palettes "{{{
 " ---------------------------------------------------------------------
 "
 " Set both gui and terminal color values in separate conditional statements
@@ -238,59 +244,32 @@ let colors_name = "solar-linduxed"
 " leave the hex values out entirely in that case and include only cterm colors)
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
-if (has("gui_running") && g:solarized_degrade == 0)
+if has("gui_running")
     let s:vmode       = "gui"
-    let s:base04      = "#002b36"
-    let s:base03      = "#002b36"
-    let s:base02      = "#073642"
-    let s:base01      = "#586e75"
-    let s:base00      = "#657b83"
-    let s:base0       = "#839496"
-    let s:base1       = "#93a1a1"
-    let s:base2       = "#eee8d5"
-    let s:base3       = "#fdf6e3"
-    let s:yellow      = "#b58900"
-    let s:orange      = "#cb4b16"
-    let s:red         = "#dc322f"
-    let s:magenta     = "#d33682"
-    let s:violet      = "#6c71c4"
-    let s:blue        = "#268bd2"
-    let s:cyan        = "#2aa198"
-    "let s:green       = "#859900" "original
-    let s:green       = "#719e07" "experimental
-    let s:dred        = "#dc322f"
-    let s:dblue       = "#268bd2"
-    let s:dcyan       = "#2aa198"
-    let s:dgreen      = "#719e07"
-elseif (has("gui_running") && g:solarized_degrade == 1)
-    " These colors are identical to the 256 color mode. They may be viewed
-    " while in gui mode via "let g:solarized_degrade=1", though this is not
-    " recommened and is for testing only.
-    let s:vmode       = "gui"
-    let s:base04      = "#1c1c1c"
+    let s:base04      = "#121212"
     let s:base03      = "#1c1c1c"
     let s:base02      = "#262626"
-    let s:base01      = "#4e4e4e"
+    let s:base01      = "#606060"
     let s:base00      = "#585858"
-    let s:base0       = "#808080"
-    let s:base1       = "#8a8a8a"
-    let s:base2       = "#d7d7af"
-    let s:base3       = "#ffffd7"
-    let s:yellow      = "#af8700"
-    let s:orange      = "#d75f00"
-    let s:red         = "#af0000"
-    let s:magenta     = "#af005f"
-    let s:violet      = "#5f5faf"
-    let s:blue        = "#0087ff"
-    let s:cyan        = "#00afaf"
-    let s:green       = "#5f8700"
-    let s:dred        = "#af0000"
-    let s:dblue       = "#0087ff"
-    let s:dcyan       = "#00afaf"
-    let s:dgreen      = "#5f8700"
+    let s:base0       = "#dadada"
+    let s:base1       = "#eeeeee"
+    let s:base2       = "#dfdfaf"
+    let s:base3       = "#ffffdf"
+    let s:yellow      = "#ffff00"
+    let s:orange      = "#ff8700"
+    let s:red         = "#ff0000"
+    let s:magenta     = "#df00af"
+    let s:violet      = "#af87ff"
+    let s:blue        = "#00afff"
+    let s:cyan        = "#5fdfdf"
+    let s:green       = "#87ff00"
+    let s:dred        = "#5f0000"
+    let s:dblue       = "#00005f"
+    let s:dcyan       = "#005f87"
+    let s:dgreen      = "#005f00"
 elseif g:solarized_termcolors != 256 && &t_Co >= 16
     let s:vmode       = "cterm"
-    let s:base04      = "8"
+    let s:base04      = "0"
     let s:base03      = "8"
     let s:base02      = "0"
     let s:base01      = "10"
@@ -337,28 +316,7 @@ elseif g:solarized_termcolors == 256
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
-"   let s:base04      = "0".s:bright
-"   let s:base03      = "0".s:bright
-"   let s:base02      = "0"
-"   let s:base01      = "2".s:bright
-"   let s:base00      = "3".s:bright
-"   let s:base0       = "4".s:bright
-"   let s:base1       = "6".s:bright
-"   let s:base2       = "7"
-"   let s:base3       = "7".s:bright
-"   let s:yellow      = "3"
-"   let s:orange      = "1".s:bright
-"   let s:red         = "1"
-"   let s:magenta     = "5"
-"   let s:violet      = "5".s:bright
-"   let s:blue        = "4"
-"   let s:cyan        = "6"
-"   let s:green       = "2"
-"   let s:dred        = "1"
-"   let s:dblue       = "4"
-"   let s:dcyan       = "6"
-"   let s:dgreen      = "2"
-    let s:base04      = "DarkGray"      " 0*
+    let s:base04      = "Black"         " 0
     let s:base03      = "DarkGray"      " 0*
     let s:base02      = "Black"         " 0
     let s:base01      = "LightGreen"    " 2*
@@ -379,7 +337,6 @@ else
     let s:dblue       = "DarkBlue"      " 4
     let s:dcyan       = "DarkCyan"      " 6
     let s:dgreen      = "DarkGreen"     " 2
-
 endif
 "}}}
 " Formatting options and null values for passthrough effect "{{{
