@@ -1,20 +1,18 @@
-" Name:     Solarized vim colorscheme
+" Name:     solar-linduxed vim colorscheme
 " Author:   Ethan Schoonover <es@ethanschoonover.com>
-" URL:      http://ethanschoonover.com/solarized
-"           (see this url for latest release & screenshots)
+" Author:   linduxed <linduxed@gmail.com>
 " License:  OSI approved MIT license (see end of this file)
-" Created:  In the middle of the night
-" Modified: 2011 May 05
 "
 " Usage "{{{
 "
 " ---------------------------------------------------------------------
 " ABOUT:
 " ---------------------------------------------------------------------
-" Solarized is a carefully designed selective contrast colorscheme with dual
-" light and dark modes that runs in both GUI, 256 and 16 color modes.
+" This theme is basically my old theme ported into the structure of the
+" Solarized theme, made by Ethan Schoonover.
 "
-" See the homepage above for screenshots and details.
+" Currently only the dark version works properly.
+" Only the 256-color-terminal colors have been configured and tested.
 "
 " ---------------------------------------------------------------------
 " OPTIONS:
