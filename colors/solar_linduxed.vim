@@ -622,7 +622,7 @@ endif
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
-exe "hi! WildMenu"       .s:fmt_none   .s:fg_blue  .s:bg_base02
+exe "hi! WildMenu"       .s:fmt_none   .s:fg_blue   .s:bg_base02
 exe "hi! Folded"         .s:fmt_bold   .s:fg_base0  .s:bg_base02  .s:sp_base03
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
 if      (g:solarized_diffmode=="high")
@@ -763,9 +763,9 @@ exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
-exe "hi! perlVarPlain"   . s:fg_yellow .s:bg_back   .s:fmt_none
-exe "hi! perlStatementFileDesc". s:fg_cyan.s:bg_back.s:fmt_none
+exe "hi! perlHereDoc"          .s:fg_base1  .s:bg_back .s:fmt_none
+exe "hi! perlVarPlain"         .s:fg_yellow .s:bg_back .s:fmt_none
+exe "hi! perlStatementFileDesc".s:fg_cyan   .s:bg_back .s:fmt_none
 
 "}}}
 " tex highlighting "{{{
@@ -814,7 +814,7 @@ let hs_highlight_boolean=1
 let hs_highlight_delimiters=1
 
 exe "hi! cPreCondit"         . s:fg_orange .s:bg_none   .s:fmt_none
-exe "hi! ConId"              . s:fg_yellow .s:bg_none    .s:fmt_none
+exe "hi! ConId"              . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi! hsImport"           . s:fg_magenta.s:bg_none   .s:fmt_none
 exe "hi! hsStructure"        . s:fg_violet .s:bg_none   .s:fmt_bold
 exe "hi! hs_hlFunctionName"  . s:fg_yellow .s:bg_none   .s:fmt_bold
@@ -866,18 +866,18 @@ exe "hi! pandocListReference"            .s:fg_magenta.s:bg_none   .s:fmt_undr
 " Definitions
 " ---------------------------------------------------------------------
 let s:fg_pdef = s:fg_violet
-exe "hi! pandocDefinitionBlock"              .s:fg_pdef  .s:bg_none  .s:fmt_none
-exe "hi! pandocDefinitionTerm"               .s:fg_pdef  .s:bg_none  .s:fmt_stnd
-exe "hi! pandocDefinitionIndctr"             .s:fg_pdef  .s:bg_none  .s:fmt_bold
-exe "hi! pandocEmphasisDefinition"           .s:fg_pdef  .s:bg_none  .s:fmt_ital
-exe "hi! pandocEmphasisNestedDefinition"     .s:fg_pdef  .s:bg_none  .s:fmt_bldi
-exe "hi! pandocStrongEmphasisDefinition"     .s:fg_pdef  .s:bg_none  .s:fmt_bold
-exe "hi! pandocStrongEmphasisNestedDefinition"   .s:fg_pdef.s:bg_none.s:fmt_bldi
-exe "hi! pandocStrongEmphasisEmphasisDefinition" .s:fg_pdef.s:bg_none.s:fmt_bldi
-exe "hi! pandocStrikeoutDefinition"          .s:fg_pdef  .s:bg_none  .s:fmt_revr
-exe "hi! pandocVerbatimInlineDefinition"     .s:fg_pdef  .s:bg_none  .s:fmt_none
-exe "hi! pandocSuperscriptDefinition"        .s:fg_pdef  .s:bg_none  .s:fmt_none
-exe "hi! pandocSubscriptDefinition"          .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocDefinitionBlock"                  .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocDefinitionTerm"                   .s:fg_pdef  .s:bg_none  .s:fmt_stnd
+exe "hi! pandocDefinitionIndctr"                 .s:fg_pdef  .s:bg_none  .s:fmt_bold
+exe "hi! pandocEmphasisDefinition"               .s:fg_pdef  .s:bg_none  .s:fmt_ital
+exe "hi! pandocEmphasisNestedDefinition"         .s:fg_pdef  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisDefinition"         .s:fg_pdef  .s:bg_none  .s:fmt_bold
+exe "hi! pandocStrongEmphasisNestedDefinition"   .s:fg_pdef  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisEmphasisDefinition" .s:fg_pdef  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrikeoutDefinition"              .s:fg_pdef  .s:bg_none  .s:fmt_revr
+exe "hi! pandocVerbatimInlineDefinition"         .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocSuperscriptDefinition"            .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocSubscriptDefinition"              .s:fg_pdef  .s:bg_none  .s:fmt_none
 
 " Tables
 " ---------------------------------------------------------------------
@@ -949,8 +949,8 @@ exe "hi! pandocSubscript"                .s:fg_violet .s:bg_none  .s:fmt_none
 exe "hi! pandocRule"                     .s:fg_blue   .s:bg_none  .s:fmt_bold
 exe "hi! pandocRuleLine"                 .s:fg_blue   .s:bg_none  .s:fmt_bold
 exe "hi! pandocEscapePair"               .s:fg_red    .s:bg_none  .s:fmt_bold
-exe "hi! pandocCitationRef"              .s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi! pandocNonBreakingSpace"         . s:fg_red   .s:bg_none  .s:fmt_revr
+exe "hi! pandocCitationRef"              .s:fg_magenta.s:bg_none  .s:fmt_none
+exe "hi! pandocNonBreakingSpace"         .s:fg_red    .s:bg_none  .s:fmt_revr
 hi! link pandocEscapedCharacter          pandocEscapePair
 hi! link pandocLineBreak                 pandocEscapePair
 
