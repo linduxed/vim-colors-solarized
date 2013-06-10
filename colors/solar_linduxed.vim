@@ -963,6 +963,11 @@ exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
 
 "}}}
+" IndentGuides plugin "{{{
+" ---------------------------------------------------------------------
+exe "hi IndentGuidesOdd"  . s:fg_none . s:bg_base02 . s:fmt_none
+exe "hi IndentGuidesEven" . s:fg_none . s:bg_base03 . s:fmt_none
+"}}}
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
 " In cases where Solarized is initialized inside a terminal vim session and
