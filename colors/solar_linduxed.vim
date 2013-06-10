@@ -605,7 +605,7 @@ else
 endif
 exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_base0  .s:fmt_revb
 exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base03 .s:bg_base0  .s:fmt_revb
-exe "hi! Visual"         .s:fmt_none   .s:fg_none   .s:bg_base02
+exe "hi! Visual"         .s:fmt_none   .s:fg_none   .s:bg_dred
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
