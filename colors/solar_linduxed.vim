@@ -361,20 +361,99 @@ endif
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
 if &background == "light"
-    let s:temp03      = s:base03
-    let s:temp02      = s:base02
-    let s:temp01      = s:base01
-    let s:temp00      = s:base00
-    let s:base03      = s:base3
-    let s:base02      = s:base2
-    let s:base01      = s:base1
-    let s:base00      = s:base0
-    let s:base0       = s:temp00
-    let s:base1       = s:temp01
-    let s:base2       = s:temp02
-    let s:base3       = s:temp03
-    if (s:back != "NONE")
-        let s:back    = s:base03
+    if has("gui_running")
+        let s:vmode       = "gui"
+        let s:base04      = "#121212"
+        let s:base03      = "#1c1c1c"
+        let s:base02      = "#262626"
+        let s:base01      = "#606060"
+        let s:base00      = "#585858"
+        let s:base0       = "#dadada"
+        let s:base1       = "#eeeeee"
+        let s:base2       = "#dfdfaf"
+        let s:base3       = "#ffffdf"
+        let s:yellow      = "#ffff00"
+        let s:orange      = "#ff8700"
+        let s:red         = "#ff0000"
+        let s:magenta     = "#df00af"
+        let s:violet      = "#af87ff"
+        let s:blue        = "#00afff"
+        let s:cyan        = "#5fdfdf"
+        let s:green       = "#87ff00"
+        let s:dred        = "#5f0000"
+        let s:dblue       = "#00005f"
+        let s:dcyan       = "#005f87"
+        let s:dgreen      = "#005f00"
+    elseif g:solarized_termcolors != 256 && &t_Co >= 16
+        let s:vmode       = "cterm"
+        let s:base04      = "0"
+        let s:base03      = "8"
+        let s:base02      = "0"
+        let s:base01      = "10"
+        let s:base00      = "11"
+        let s:base0       = "12"
+        let s:base1       = "14"
+        let s:base2       = "7"
+        let s:base3       = "15"
+        let s:yellow      = "3"
+        let s:orange      = "9"
+        let s:red         = "1"
+        let s:magenta     = "5"
+        let s:violet      = "13"
+        let s:blue        = "4"
+        let s:cyan        = "6"
+        let s:green       = "2"
+        let s:dred        = "1"
+        let s:dblue       = "4"
+        let s:dcyan       = "6"
+        let s:dgreen      = "2"
+    elseif g:solarized_termcolors == 256
+        let s:vmode       = "cterm"
+        let s:base04      = "233"
+        let s:base03      = "234"
+        let s:base02      = "235"
+        let s:base01      = "241"
+        let s:base00      = "240"
+        let s:base0       = "253"
+        let s:base1       = "255"
+        let s:base2       = "187"
+        let s:base3       = "230"
+        let s:yellow      = "226"
+        let s:orange      = "208"
+        let s:red         = "196"
+        let s:magenta     = "163"
+        let s:violet      = "141"
+        let s:blue        = "39"
+        let s:cyan        = "80"
+        let s:green       = "118"
+        let s:dred        = "52"
+        let s:dblue       = "17"
+        let s:dcyan       = "24"
+        let s:dgreen      = "22"
+    else
+        let s:vmode       = "cterm"
+        let s:bright      = "* term=bold cterm=bold"
+        let s:base04      = "Black"         " 0
+        let s:base03      = "DarkGray"      " 0*
+        let s:base02      = "Black"         " 0
+        let s:base01      = "LightGreen"    " 2*
+        let s:base00      = "LightYellow"   " 3*
+        let s:base0       = "LightBlue"     " 4*
+        let s:base1       = "LightCyan"     " 6*
+        let s:base2       = "LightGray"     " 7
+        let s:base3       = "White"         " 7*
+        let s:yellow      = "DarkYellow"    " 3
+        let s:orange      = "LightRed"      " 1*
+        let s:red         = "DarkRed"       " 1
+        let s:magenta     = "DarkMagenta"   " 5
+        let s:violet      = "LightMagenta"  " 5*
+        let s:blue        = "DarkBlue"      " 4
+        let s:cyan        = "DarkCyan"      " 6
+        let s:green       = "DarkGreen"     " 2
+        let s:dred        = "DarkRed"       " 1
+        let s:dblue       = "DarkBlue"      " 4
+        let s:dcyan       = "DarkCyan"      " 6
+        let s:dgreen      = "DarkGreen"     " 2
     endif
 endif
 "}}}
