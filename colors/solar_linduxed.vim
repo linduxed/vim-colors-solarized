@@ -471,6 +471,10 @@ if &background == "light"
         let s:black       = "Black"         " 0
         let s:white       = "White"         " 7*
     endif
+
+    if (s:back != "NONE")
+        let s:back = s:white
+    endif
 endif
 "}}}
 " Optional contrast schemes "{{{
