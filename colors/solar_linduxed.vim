@@ -392,6 +392,8 @@ if &background == "light"
         let s:dblue       = "#00005f"
         let s:dcyan       = "#005f87"
         let s:dgreen      = "#005f00"
+        let s:black       = "#000000"
+        let s:white       = "#ffffff"
     elseif g:solarized_termcolors != 256 && &t_Co >= 16
         let s:vmode       = "cterm"
         let s:base04      = "0"
@@ -415,6 +417,8 @@ if &background == "light"
         let s:dblue       = "4"
         let s:dcyan       = "6"
         let s:dgreen      = "2"
+        let s:black       = "0"
+        let s:white       = "15"
     elseif g:solarized_termcolors == 256
         let s:vmode       = "cterm"
         let s:base04      = "233"
@@ -438,6 +442,8 @@ if &background == "light"
         let s:dblue       = "17"
         let s:dcyan       = "24"
         let s:dgreen      = "22"
+        let s:black       = "0"
+        let s:white       = "15"
     else
         let s:vmode       = "cterm"
         let s:bright      = "* term=bold cterm=bold"
@@ -462,6 +468,8 @@ if &background == "light"
         let s:dblue       = "DarkBlue"      " 4
         let s:dcyan       = "DarkCyan"      " 6
         let s:dgreen      = "DarkGreen"     " 2
+        let s:black       = "Black"         " 0
+        let s:white       = "White"         " 7*
     endif
 endif
 "}}}
