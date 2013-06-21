@@ -1,4 +1,4 @@
-linduxed's Colorscheme for Vim
+linduxed's colorscheme for Vim
 ==============================
 
 Developed by Ethan Schoonover <es@ethanschoonover.com>, modified by linduxed
