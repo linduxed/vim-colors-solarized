@@ -12,6 +12,13 @@ the original Solarized theme, so do check it out on the [Solarized homepage].
 
 [Solarized homepage]: http://ethanschoonover.com/solarized
 
+### Screenshot
+
+![dark-theme ruby code](http://i.imgur.com/SJbMrPR.png)
+
+Check out the [full album](http://imgur.com/a/Y2CjD) which contains examples
+for Ruby, Haskell and Vimscript in both dark and light versions.
+
 ### Modify .vimrc
 
 The following lines need to be added to your .vimrc:
