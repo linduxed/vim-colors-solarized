@@ -4,8 +4,7 @@ Solarized Colorscheme for Vim
 Developed by Ethan Schoonover <es@ethanschoonover.com>, modified by linduxed
 <linduxed@gmail.com>.
 
-Original Solarized theme
-========================
+## Original Solarized theme
 
 This theme changes almost all the colors of the Solarized theme, while keeping
 the code itself almost unchanged. Lots of work has gone into the creation of
@@ -21,7 +20,7 @@ The following lines need to be added to your .vimrc:
     set background=dark
     colorscheme solar_linduxed
 
-Currently the light version of the theme doesn't work.
+Change `dark` for `light` if you prefer a light version.
 
 Loading the theme in a terminal without setting the amount of terminal colors
 (t_Co) will result in the theme breaking. The theme also needs to have it
