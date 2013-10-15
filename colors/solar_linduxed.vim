@@ -926,7 +926,7 @@ exe "hi! hsImportLabel"      . s:fg_cyan   .s:bg_none   .s:fmt_bold
 exe "hi! hs_OpFunctionName"  . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi! hs_DeclareFunction" . s:fg_orange .s:bg_none   .s:fmt_none
 exe "hi! hsType"             . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi! hsTypedef"          . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hsTypedef"          . s:fg_cyan   .s:bg_none   .s:fmt_bold
 exe "hi! hsModuleName"       . s:fg_green  .s:bg_none   .s:fmt_undr
 exe "hi! hsModuleStartLabel" . s:fg_magenta.s:bg_none   .s:fmt_none
 
