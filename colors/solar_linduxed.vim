@@ -921,7 +921,7 @@ exe "hi! ConId"              . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi! hsImport"           . s:fg_magenta.s:bg_none   .s:fmt_none
 exe "hi! hsStructure"        . s:fg_violet .s:bg_none   .s:fmt_bold
 exe "hi! hs_hlFunctionName"  . s:fg_yellow .s:bg_none   .s:fmt_bold
-exe "hi! hsStatement"        . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hsStatement"        . s:fg_cyan   .s:bg_none   .s:fmt_bold
 exe "hi! hsImportLabel"      . s:fg_cyan   .s:bg_none   .s:fmt_bold
 exe "hi! hs_OpFunctionName"  . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi! hs_DeclareFunction" . s:fg_orange .s:bg_none   .s:fmt_none
