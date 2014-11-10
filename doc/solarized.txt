@@ -110,7 +110,7 @@ overwrite replace mode).
 Loading the theme in a terminal without setting the amount of terminal colors
 (t_Co) will result in the theme breaking. The theme also needs to have it
 specified that you want to use the 256 color version. Therefore I recommend you
-add the following lines before `colorscheme solar-linduxed`:
+add the following lines before `colorscheme solar_linduxed`:
 
     if !has('gui_running')
         set t_Co=256

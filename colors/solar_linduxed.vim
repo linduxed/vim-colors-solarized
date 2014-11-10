@@ -1,4 +1,4 @@
-" Name:     solar-linduxed vim colorscheme
+" Name:     solar_linduxed vim colorscheme
 " Author:   Ethan Schoonover <es@ethanschoonover.com>
 " Author:   linduxed <linduxed@gmail.com>
 " License:  OSI approved MIT license (see end of this file)
@@ -232,7 +232,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "solar-linduxed"
+let colors_name = "solar_linduxed"
 
 "}}}
 " Palettes "{{{
