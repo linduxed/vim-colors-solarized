@@ -1068,8 +1068,8 @@ hi! link pandocMetadataTitle             pandocMetadata
 "}}}
 " IndentGuides plugin "{{{
 " ---------------------------------------------------------------------
-exe "hi IndentGuidesOdd"  . s:fg_none . s:bg_base02 . s:fmt_none
-exe "hi IndentGuidesEven" . s:fg_none . s:bg_base03 . s:fmt_none
+exe "hi IndentGuidesOdd"  . s:fg_none . s:bg_base03 . s:fmt_none
+exe "hi IndentGuidesEven" . s:fg_none . s:bg_base04 . s:fmt_none
 "}}}
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
