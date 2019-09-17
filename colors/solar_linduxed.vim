@@ -757,7 +757,7 @@ exe "hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red
 exe "hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet
 exe "hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan
 exe "hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow
-exe "hi! Pmenu"          .s:fmt_none   .s:fg_blue   .s:bg_base03
+exe "hi! Pmenu"          .s:fmt_none   .s:fg_base1  .s:bg_base02
 exe "hi! PmenuSel"       .s:fmt_bold   .s:fg_cyan   .s:bg_base02
 exe "hi! PmenuSbar"      .s:fmt_bold   .s:fg_green  .s:bg_base03
 exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base2  .s:bg_base03
